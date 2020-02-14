@@ -5,10 +5,10 @@
 #include<stdint.h>
 #define F_CPU 16000000UL
 #define BAUD 9600
-#define traco 300
-#define ponto 100
-#define mid 300
-#define espaco 900
+#define traco 600
+#define ponto 200
+#define mid 200
+#define espaco 1400
 #include<util/setbaud.h>
 #include<string.h>
 void inicializar_uart0(){
