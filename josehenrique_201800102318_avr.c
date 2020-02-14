@@ -547,7 +547,7 @@ int main(){
 		    _delay_ms(traco);
           }
       PORTB = PORTB & ~(1 << PORTB5);
-      _delay_ms(mid);
+      _delay_ms(espaco);
   }
 }
 }
