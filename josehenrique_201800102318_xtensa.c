@@ -5,7 +5,7 @@ const char *ssid = "Wi-Fi Name"; //  Your Wi-Fi Name
 const char *password = "Password"; // Wi-Fi Password
 
 #define LED 2// led connected to GPIO2 (D4)
-#define BUTTON 3
+#define BUTTON 13
 WiFiServer server(80);
 void setup()
 {
