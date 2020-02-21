@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 
-const char *ssid = "Wi-Fi Name"; //  Your Wi-Fi Name
+const char *ssid = "LENOVO K6 NOTE"; //  Your Wi-Fi Name
 
-const char *password = "Password"; // Wi-Fi Password
+const char *password = "12345678"; // Wi-Fi Password
 
 #define LED 2// led connected to GPIO2 (D4)
 #define BUTTON 13
