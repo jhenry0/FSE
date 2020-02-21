@@ -4,7 +4,7 @@ const char *ssid = "Wi-Fi Name"; //  Your Wi-Fi Name
 
 const char *password = "Password"; // Wi-Fi Password
 
-#define LED 13 // led connected to GPIO2 (D4)
+#define LED 2// led connected to GPIO2 (D4)
 #define BUTTON 3
 WiFiServer server(80);
 void setup()
@@ -13,7 +13,7 @@ void setup()
     Serial.begin(9600); //Default Baudrate
 
     pinMode(LED, OUTPUT);
-
+    pinMode(BUTTON, INPUT);
     pinMode()
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED)
