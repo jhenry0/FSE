@@ -43,20 +43,10 @@ void loop()
     Serial.println(request);
     client.flush();
     int value = LOW;
-    if (request.indexOf("/LED=ligo") != -1)
+    if (request.indexOf("/LED=1") != -1)
     {
 
-        digitalWrite(LED, HIGH); // Turn LED ON
-        value = HIGH;
-    }
-
-    if (request.indexOf("/LED=desligo") != -1)
-
-    {
-
-        digitalWrite(LED, LOW); // Turn LED OFF
-
-        value = LOW;
+        digitalWrite(LED, !digitalRead(BUTTON)); 
     }
 
     //*------------------HTML Page Code---------------------*//
@@ -67,7 +57,7 @@ void loop()
     client.println("<!DOCTYPE HTML>");
     client.println("<html>");
     client.print(" Liga ou desliga led: ");
-    if (value == HIGH)
+    if (digitalRead(BUTTON) == 1)
 
     {
 
@@ -83,14 +73,7 @@ void loop()
 
     client.println("<br><br>");
 
-    client.println("<a href=\"/LED=ligo\"\"><button>ligo</button></a>");
-
-    client.println("<a href=\"/LED=desligo\"\"><button>desligo</button></a><br />");
-    if(digitalRead(BUTTON) == 1){
-        client.println("Solta o botao cara :( ");
-    }else{
-        client.println("Ainda bem que você não vai apertar esse lindo botao")
-    }
+    client.println("<a href=\"/LED=1\"\"><button>LED</button></a><br />");
     client.println("</html>");
     delay(1);
     Serial.println("Client disonnected");
