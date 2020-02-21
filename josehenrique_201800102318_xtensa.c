@@ -14,7 +14,6 @@ void setup()
 
     pinMode(LED, OUTPUT);
     pinMode(BUTTON, INPUT);
-    pinMode()
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED)
     {
